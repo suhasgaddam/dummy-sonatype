@@ -4,9 +4,11 @@ organization := "com.suhasgaddam.dummy"
 
 name := "dummy-sonatype"
 
-publishTo := Some(
-  if (isSnapshot.value)
-    Opts.resolver.sonatypeSnapshots
-  else
-    Opts.resolver.sonatypeStaging
+orgAfterCISuccessCheckSetting := true
+
+import sbtorgpolicies.runnable.syntax._
+orgAfterCISuccessTaskListSetting := List(
+  orgPublishReleaseTask.asRunnableItem(allModules = true,
+                                       aggregated = false,
+                                       crossScalaVersions = true)
 )

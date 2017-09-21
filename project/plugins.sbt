@@ -1,1 +1,1 @@
-addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "2.0")
+addSbtPlugin("com.47deg" % "sbt-org-policies" % "0.7.6-SNAPSHOT")
