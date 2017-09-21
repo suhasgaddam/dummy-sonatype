@@ -12,6 +12,8 @@ startYear := Option(2017)
 
 orgAfterCISuccessCheckSetting := true
 
+pgpPassphrase := Some(getEnvVar("PGP_PASSPHRASE").getOrElse("").toCharArray)
+
 orgGithubSetting := GitHubSettings(
   organization = "suhasgaddam",
   project = (name in LocalRootProject).value,
