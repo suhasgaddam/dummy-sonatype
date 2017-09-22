@@ -8,6 +8,8 @@ name := "dummy-sonatype"
 description := name.value
 startYear := Option(2017)
 
+scoverage.ScoverageKeys.coverageFailOnMinimum := false
+
 orgAfterCISuccessCheckSetting := true
 
 pgpPassphrase := Some(getEnvVar("PGP_PASSPHRASE").getOrElse("").toCharArray)
