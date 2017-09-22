@@ -9,3 +9,5 @@ The maintainers of the project are:
 ## Contributors
 
 These are the people that have contributed to the dummy-sonatype project:
+
+* Suhas Gaddam <[suhasgaddam](https://github.com/suhasgaddam)>
