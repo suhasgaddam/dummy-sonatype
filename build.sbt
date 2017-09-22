@@ -3,8 +3,6 @@ import sbtorgpolicies.runnable.syntax._
 
 scalaVersion := sbtorgpolicies.model.scalac.`2.11`
 
-// organization := "com.suhasgaddam.dummy"
-
 name := "dummy-sonatype"
 
 description := name.value
@@ -23,9 +21,9 @@ orgGithubSetting := GitHubSettings(
   organizationEmail = "suhas.g.2011@gmail.com"
 )
 
-import sbtorgpolicies.runnable.syntax._
 orgAfterCISuccessTaskListSetting := List(
-  orgPublishReleaseTask.asRunnableItem(allModules = true,
-                                       aggregated = true,
-                                       crossScalaVersions = true)
+  orgUpdateDocFiles.asRunnableItem,
+  depUpdateDependencyIssues.asRunnableItem,
+  orgPublishReleaseTask
+    .asRunnableItem(allModules = true, aggregated = true, crossScalaVersions = true)
 )
